@@ -1,4 +1,4 @@
-import bluetooth
+import lightblue as bluetooth
 import time
 
 
@@ -10,13 +10,13 @@ class MindwaveMobileRawReader:
         
     def connectToMindWaveMobile(self):
         # connecting via bluetooth RFCOMM
-        self.mindwaveMobileSocket = bluetooth.BluetoothSocket(bluetooth.RFCOMM)
-        mindwaveMobileAddress = '9C:B7:0D:72:CD:02';
+        self.mindwaveMobileSocket = bluetooth.socket(bluetooth.RFCOMM)
+        mindwaveMobileAddress = '74:E5:43:B1:8D:AC'
         while(True):
             try:
                 self.mindwaveMobileSocket.connect((mindwaveMobileAddress, 1))
                 return;
-            except bluetooth.btcommon.BluetoothError as error:
+            except bluetooth._lightbluecommon.BluetoothError as error:
                 print "Could not connect: ", error, "; Retrying in 5s..."
                 time.sleep(5) 
     
