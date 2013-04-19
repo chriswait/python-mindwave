@@ -10,7 +10,8 @@ Usage:
 
 * Initilaise the background daemon which logs to the database:
 
-```python dbLogger.py <name> <activity>
+```
+python dbLogger.py <name> <activity>
 
 	where 	<name> 		corresponds to the user_id (guest=0)
 		<activity>	corresponds to current activity (	other=0,
