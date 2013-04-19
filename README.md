@@ -14,7 +14,7 @@ Usage:
 python dbLogger.py <name> <activity>
 
 	where 	<name> 		corresponds to the user_id (guest=0)
-		<activity>	corresponds to current activity (	other=0,
+		    <activity>	corresponds to current activity (other=0,
 									revising=1,
 									programming=2, 
 									meditating=3, 
@@ -27,9 +27,7 @@ python dbLogger.py <name> <activity>
 
 ```python visualiser.py```
 
-
-
-Original usage example:
+* Original usage example:
 
 ```python
 mindwaveDataPointReader = MindwaveDataPointReader()
