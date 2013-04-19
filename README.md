@@ -1,12 +1,31 @@
-Some scripts to access the data streamed by the **Neurosky Mindwave Mobile** Headset over Bluetooth on Linux.
+MindWave Logging and Visualisation
+==================================
 
-Requirements (for Linux):
+Some scripts to access the data streamed by the **Neurosky Mindwave Mobile** Headset over Bluetooth. 
+
+**dbLogger.py** - writes data recorded by the headset to a mysql database
+
+**brain.py,brainRecent.py** - allow webapps utilising the Neurosky MindWave Mobile device to be developed
+
+**visualiser.py** - visualises the current MindWave data focusing on sustained levels of attention and meditation
+
+Requirements 
+============
+
+Hardware:
+* A **Neurosky Mindwave Mobile** Headset and bluetooth device attached/built-in to your computer
+
+Linux:
 * [PyBluez](http://code.google.com/p/pybluez/), see their [documentation](http://code.google.com/p/pybluez/wiki/Documentation) for installation instructions :)
 
-Requirements (for Mac OS X > 10.4)
+Mac OS X > 10.4:
 * [lightblue](http://lightblue.sourceforge.net/), see the downloads section [downloads](http://lightblue.sourceforge.net/#downloads) for installation instructions :)
 
-Usage:
+Visualiser Dependency:
+* pygame [TODO]: add good tutorial link
+
+Usage
+=====
 
 * Initilaise the background daemon which logs to the database:
 
