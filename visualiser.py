@@ -23,16 +23,11 @@ class Point:
     def process(self, dataPoint):
         if (not dataPoint.__class__ is RawDataPoint):
             if isinstance(dataPoint, MeditationDataPoint):
-                #print "Meditation " , dataPoint.meditationValue
                 self.meditation = int(dataPoint.meditationValue)
-                #lastMeditation = self.meditation
             elif isinstance(dataPoint, AttentionDataPoint):
-                #selfrint "Attetntion " , dataPoint.attentionValue
                 self.attention = int(dataPoint.attentionValue)
-                #lastAttention = self.attention
-
             elif isinstance(dataPoint, EEGPowersDataPoint):
-                #selfrint "EEGPowers"
+                #print "EEGPowers"
                 self.delta = dataPoint.delta
                 self.theta = dataPoint.theta
                 self.lowAlpha = dataPoint.lowAlpha
@@ -42,9 +37,7 @@ class Point:
                 self.lowGamma = dataPoint.lowGamma
                 self.midGamma = dataPoint.midGamma
             elif isinstance(dataPoint, PoorSignalLevelDataPoint):
-                #selfrint "NoiseDataPoint" , dataPoint.amountOfNoise
                 self.noise = int(dataPoint.amountOfNoise)
-                #lastNoise = self.noise
 
 class Circle:
     def __init__(self, pos, colour, smoothingConstant=0.25):
@@ -102,6 +95,7 @@ if __name__ == '__main__':
     # Setup mindwave
     mindwaveDataPointReader = MindwaveDataPointReader()
     mindwaveDataPointReader.start()
+    p = Point()
 
     # Get positions for the circles
     third = (screen.get_size()[0]/3, screen.get_size()[1]/2)
@@ -121,7 +115,6 @@ if __name__ == '__main__':
 
     # Set up the UI elements
     ui = [attentionCircle, meditationCircle, noiseIndicator]
-    p = Point()
 
     # Set up frame rate counter
     fps = 30
