@@ -6,8 +6,9 @@ from pygame.locals import *
 from MindwaveDataPoints import *
 from MindwaveDataPointReader import MindwaveDataPointReader
 
-#screenSize = (1960, 1080)
-screenSize = (3920, 1080)
+screenSize = (1960, 1080)
+#screenSize = (3920, 1080)
+
 
 class Point:
     def __init__(self):
